@@ -1,0 +1,1084 @@
+
+	PLATFORM DIGITAL KOMUNITAS & PUSAT KARIR ANAK MUDA PAPUA BERBASIS
+	 MOBILE
+	
+	PROJECT 3
+	
+	
+	
+	
+	
+	Disusun oleh:
+	
+	NIM   		: 1123150103
+	Nama 		: Mison Wenda
+	
+	
+	
+	
+	PROGRAM STUDI TEKNIK INFORMATIKA 
+	FAKULTAS TEKNOLOGI INFORMASI DAN KOMUNIKASI
+	 INSTITUT TEKNOLOGI DAN BISNIS 
+	BINA SARANA GLOBAL 
+	TANGERANG 
+	2026
+	
+	INSTITUT TEKNOLOGI DAN BISNIS
+	BINA SARANA GLOBAL
+	
+	LEMBAR PENGESAHAN PROJECT 3
+	
+	PLATFORM DIGITAL KOMUNITAS & PUSAT KARIR 
+	ANAK MUDA PAPUA BERBASIS
+	 MOBILE
+	
+	Disusun Oleh :
+	
+	NIM			: 1123150103
+	Nama			: Mison Wenda
+	Program Studi		: Teknik Informatika
+	Fakultas		: Teknologi Informasi dan Komunikasi
+	Jenjang Studi		: Strata 1
+	Konsentrasi		: Software Engineering
+	 
+	Disahkan Oleh :
+	
+	                     Tangerang,… …………….
+	
+	         Dekan,                                                                           Ketua,
+	Teknologi Informasi dan Komunikasi                             Program Studi Teknik Informasi
+	
+	
+	
+	(Dr. M. Ramaddan Julianti, M.T)                                    (Achmad Sidik, M.kom)
+	        NUPTK. 0053758659130163                                    NUPTK.7250757658130143
+	INSTITUT TEKNOLOGI DAN BISNIS
+	BINA SARANA GLOBAL
+	
+	LEMBAR PERSETUJUAN PEMBIMBING
+	
+	
+	NIM			: 1123150103
+	Nama			: Mison Wenda
+	Program Studi		: Teknik Informatika
+	Fakultas		: Teknologi Informasi dan Komunikasi
+	Jenjang Studi		: Strata 1
+	Judul		: Platform digital komunitas & pusat karir anak    
+	      muda papua berbasis mobile 
+	
+	
+	       Tangerang,………… Februari 2026
+	
+	
+	           Pembimbing Utama,             				 Pembimbing Pendamping,  
+	
+	
+	
+	
+	  Achamd Sidik, M.Kom.                                                            Nunung, M. Kom
+	NUPTK.7250757658130143                                                NUPTK.
+	
+	
+	
+	ABSTRAK
+	
+	
+	Perkembangan teknologi informasi saat ini menjadi solusi utama dalam mengatasi ketimpangan akses informasi, termasuk dalam pemetaan potensi sumber daya manusia anak muda di Provinsi Papua. Tantangan utama yang dihadapi adalah belum adanya platform digital yang terpusat untuk mendata komunitas dan menyediakan informasi pusat karir bagi talenta muda dari berbagai kabupaten di Papua. Penelitian ini bertujuan untuk merancang dan membangun "Platform Digital Komunitas & Pusat Karir Anak Muda Papua" berbasis mobile menggunakan framework Flutter. Aplikasi ini dikembangkan dengan mengintegrasikan dua teknologi database, yaitu Firebase Authentication yang berfungsi sebagai sistem keamanan autentikasi pengguna berbasis cloud, dan database MySQL yang digunakan untuk manajemen data profil pengguna secara relasional pada server lokal melalui perantara API (Application Programming Interface) berbasis PHP. Metode pengembangan sistem yang digunakan dalam penelitian ini mengikuti siklus hidup pengembangan perangkat lunak yang sistematis. Hasil dari penelitian ini adalah sebuah aplikasi Android yang mampu memvalidasi akun pengguna melalui Firebase dan melakukan sinkronisasi data profil seperti nama lengkap dan asal kabupaten ke dalam database MySQL secara real-time. Dengan adanya platform ini, proses pendataan anak muda Papua menjadi lebih terstruktur dan memudahkan pengelompokan komunitas berdasarkan wilayah, sehingga diharapkan dapat mempercepat penyebaran informasi karir dan pemberdayaan anak muda di tanah Papua.
+	Kata Kunci: Flutter, Firebase Authentication, MySQL, Pusat Karir, Papua, Mobile Application. 
+	
+	
+	
+	
+	
+	
+	
+	
+	ABSTRACT
+	
+	
+	Current advancements in information technology have become the primary solution for addressing disparities in access to information, including in mapping the human resource potential of young people in Papua Province. The main challenge faced is the lack of a centralized digital platform to register communities and provide career center information for young talent from various regencies in Papua. This study aims to design and build a mobile-based “Papua Youth Community & Career Center Digital Platform” using the Flutter framework. This application was developed by integrating two database technologies: Firebase Authentication, which functions as a cloud-based user authentication security system, and a MySQL database used for relational management of user profile data on a local server via a PHP-based API (Application Programming Interface). The system development method used in this research follows a systematic software development life cycle. The result of this research is an Android application capable of validating user accounts via Firebase and synchronizing profile data—such as full names and home districts—into the MySQL database in real-time. With this platform, the process of collecting data on Papua’s youth becomes more structured and facilitates community grouping by region, thereby accelerating the dissemination of career information and the empowerment of young people in Papua.
+	
+	Keywords: Flutter, Firebase Authentication, MySQL, Career Center, Papua, Mobile Application. 
+	
+	
+	
+	
+	
+	
+	
+	
+	KATA PENGANTAR
+	
+	Puji syukur kehadirat Allah SWT karena berkat Rahmat dan Karunia-Nya penulis dapat menyelesaikan penyusunan skripsi ini. Salawat serta salam semoga senantiasa tercurah kepada Nabi Muhammad SAW, keluarganya, para sahabatnya, hingga umatnya sampai akhir zaman, amin.
+	Penulisan laporan ini diajukan untuk memenuhi salah satu syarat Project 3 pada jenjang Strata 1 (S1) di Institut Teknologi dan Bisnis Bina Sarana Global. Dalam proses penyusunannya, penulis menghadapi berbagai hambatan, namun berkat bimbingan, bantuan, serta dukungan moral dan material dari berbagai pihak, khususnya orang tua dan keluarga, laporan ini akhirnya dapat diselesaikan.Selanjutnya dengan tulus hati penulis ingin mengucapkan terima kasih kepada semua pihak yang telah membantu penulis dalam penyusunan laporan ini, diantaranya:
+	1. Bapak Assoc. Prof. Dr. H. Dedi, M.Si. selaku Rektor Institut Teknologi dan Bisnis Bina Sarana Global.
+	2. Bapak M. Ramaddan Julianti, M.T. selaku Dekan Fakultas Teknologi Informasi dan     Komunikasi, dan Juga selaku Pembimbing Project 3 ini.
+	Semoga Allah SWT memberikan balasan yang berlipat ganda kepada semuanya. Demi perbaikan selanjutnya, saran dan kritik yang membangun akan penulis terima dengan senang hati. Akhirnya hanya kepada Allah SWT penulis serahkan segalanya, mudah-mudahan laporan ini dapat bermanfaat khususnya bagi penulis dan umumnya bagi kita semua.
+	
+	Tangerang, Februari 2026
+	Penulis,
+	
+									      Mison Wenda
+	
+	
+	BAB I
+	PENDAHULUAN
+	
+	Latar Belakang
+	Provinsi Papua memiliki potensi sumber daya manusia (SDM) yang melimpah di kalangan generasi muda. Namun, pengelolaan data komunitas dan penyebaran informasi karier yang terstruktur masih menjadi tantangan di era digital ini. Selama ini, informasi mengenai peluang karier dan pendataan anak muda masih bersifat parsial dan belum terintegrasi ke dalam satu platform digital yang mampu memetakan potensi berdasarkan asal kabupaten secara akurat.
+	Pemanfaatan teknologi mobile menggunakan framework Flutter menawarkan solusi lintas platform yang efisien. Dengan mengintegrasikan sistem keamanan autentikasi cloud melalui Firebase Authentication dan manajemen database relasional lokal menggunakan MySQL, dapat dibangun sebuah sistem yang andal untuk mengonsolidasikan data anak muda Papua. Oleh karena itu, penelitian ini dilakukan untuk membangun "Platform Digital Komunitas & Pusat Karir Anak Muda Papua".
+	Identifikasi Masalah
+	Identifikasi masalah merupakan penjabaran masalah yang diidentifikasi oleh penulis:
+	Belum adanya wadah digital terpusat untuk mendata komunittas anak muda di Papua.
+	Sulitnya 
+	melakukan pemetaan data potensi karier berdasarkan asal daerah/kabupaten.
+	Kebutuhan akan system autentikasi yang aman namun tetap memilik database local yang mudah dikelola secara mandiri.
+	Rumusan Masalah 
+	Rumusan masalah merupakan pendetilan dari permasalahan yang diidentifikasi dalam butir Latar Belakang:
+	Bagaimana membangun Platform Digital Komunitas & Pusat Karir Anak Muda Papua berbasis aplikasi mobile yang dapat mengintegrasikan data pengguna dari berbagai kabupaten secara terpusat?
+	Bagaimana menerapkan sistem autentikasi dan sinkronisasi data pada Platform Digital ini agar data komunitas anak muda Papua dapat tersimpan dengan aman di cloud sekaligus terkelola dengan baik di database lokal?
+	Ruang Lingkup
+	Subbab ini berisi batasan-batasan sistem yang dibahas:
+	Aplikasi dikembangkan untuk sistem operasi Android.
+	Fitur Utama mencakup registrasi pengguna, login, dan pengisian data profil (Nama dan Kabupaten ).
+	Teknologi yang digunakan: Flutter ( Frontend ), Firebase Auth (Security), PHP (API), dan Mysql/XAMPP (Database).
+	
+	Tujuan dan Manfaat
+	Tujuan
+	Tujuan penelitian untuk menghasilkan Platform Digital Komunitas & Pusat Karir Anak Muda Papua yang berfungsi sebagai media informasi dan pendataan talenta muda Papua secara digital. Untuk mengimplementasikan integrasi teknologi Firebase dan MySQL pada platform tersebut untuk memastikan keamanan akses akun komunitas.
+	Manfaat
+	Manfaat adalah hal-hal yang terjadi apabila tujuan tercapai:
+	Memberikan kemudahan dalam mengakses informasi pusat karir dan komunitas secara terpusat melalui perangkat mobile.
+	Menyediakan media untuk membangun profil profesional digital yang dapat digunakan untuk pengembangan karir di masa depan.
+	
+	Metode Penelitian
+	Metode Pengumpulan Data
+	Untuk memperoleh data yang akurat dan relevan dalam pengembangan Platform Digital Komunitas & Pusat Karir Anak Muda Papua berbasis mobile ini, dilakukan beberapa teknik pengumpulan data sebagai berikut:
+	Metode Observasi (Observation): Melakukan Penulis melakukan pengamatan secara langsung terhadap proses penyebaran informasi lowongan kerja dan pendataan komunitas anak muda yang ada saat ini di Papua. Melalui observasi ini, ditemukan bahwa proses yang berjalan masih bersifat konvensional dan belum terintegrasi dalam satu sistem digital yang memudahkan pemetaan berdasarkan wilayah kabupaten.
+	Metode Wawancara (Interview): Penulis melakukan tanya jawab secara langsung dengan beberapa rekan komunitas dan pihak pengelola informasi karir untuk mengetahui kebutuhan fitur apa saja yang paling dibutuhkan. Hasil wawancara ini digunakan sebagai acuan dalam menentukan fungsionalitas aplikasi, seperti kemudahan pengisian data asal kabupaten dan keamanan akun.
+	Metode Studi Pustaka (Library Research): Penulis melakukan penelitian pustaka dengan mencari referensi melalui jurnal ilmiah, buku, dan dokumentasi teknis yang berkaitan dengan topik penelitian. Fokus utama research ini adalah mempelajari implementasi framework Flutter, sistem keamanan pada Firebase Authentication, serta cara menghubungkan aplikasi dengan database MySQL menggunakan API berbasis PHP.
+	
+	Metode Pengembangan / Metode Analisis dan Rancangan
+	Metode yang digunakan dalam penulisan ini mencakup dua bagian pokok, yaitu metode analisis dan metode perancangan:
+	Metode Analisis
+	Analisis sistem dilakukan melalui empat tahapan utama, yaitu:
+	Melakukan survei atas sistem yang sedang berjalan.
+	Melakukan analisis terhadap temuan-temuan dari hasil survei tersebut.
+	Identifikasi kebutuhan informasi.
+	Identifikasi persyaratan sistem.
+	
+	Rancangan Metode
+	Metode perancangan yang digunakan adalah Perancangan Berorientasi Objek (Object Oriented Analysis and Design) dengan menggunakan alat bantu UML (Unified Modelling Language). Diagram yang dibuat minimal mencakup 4 (empat) macam diagram, yaitu:
+	Use Case Diagram: Untuk menggambarkan interaksi antara pengguna (Anak Muda Papua) dan Administrator dengan fitur-fitur platform.
+	Activity Diagram: Untuk menggambarkan aliran alur aktivitas dalam sistem, mulai dari pendaftaran hingga data tersinkronisasi ke database.
+	Class Diagram: Untuk menggambarkan struktur kelas dan hubungan antar data dalam database MySQL.
+	Sequence Diagram: Untuk menggambarkan urutan pertukaran pesan antar objek dalam sistem untuk fungsi tertentu (misalnya proses login atau simpan profil).
+	Sistematis Penulisan
+	Sistematika penulisan berisi keterangan masing-masing isi bab secara ringkas dan deskriptif mengenai tahapan penyusunan skripsi sebagai berikut:
+	BAB I PENDAHULUAN: 
+	Berisi tentang latar belakang masalah, identifikasi masalah, rumusan masalah, ruang lingkup penelitian, tujuan dan manfaat penelitian, metode penelitian (pengumpulan data, analisis, dan perancangan), serta sistematika penulisan laporan.
+	BAB II LANDASAN TEORI: 
+	Memaparkan teori-teori dasar (seperti sistem, aplikasi mobile, framework Flutter, bahasa pemrograman Dart, dan Unified Modeling Language) serta teori khusus yang berhubungan langsung dengan topik yang dibahas (seperti konsep komunitas digital, bursa kerja/pusat karir, mekanisme kueri data, dan pagination) beserta tinjauan pustaka (literature review) dari penelitian terdahulu.
+	BAB III ANALISIS SISTEM BERJALAN: 
+	Menguraikan sejarah singkat, struktur organisasi, wewenang, dan tanggung jawab pada objek penelitian Komunitas Anak Muda Papua. Bab ini juga membahas tata laksana prosedur sistem pendataan yang sedang berjalan, analisis kelemahan sistem, alternatif pemecahan masalah, serta lampiran tabel User Requirement (Elisitasi Tahap I, II, III, dan Final Draft).
+	BAB IV RANCANGAN SISTEM YANG DIUSULKAN: 
+	Berisi usulan prosedur baru, diagram rancangan sistem, dan prototype
+	tampilan
+	BAB V PENUTUP: 
+	Berisi simpulan dan saran
+	BAB II
+	LANDASAN TEORI
+	
+	Teori-Teori Dasar / Umum
+	Pengertian Sistem 
+	Sistem merupakan pondasi utama dalam pembangunan suatu aplikasi atau platform digital. Untuk memahami konsep ini secara mendalam, berikut adalah beberapa pengertian sistem menurut para ahli:
+	Menurut Jeperson Hutahaean (2015:2), sistem adalah suatu jaringan kerja dari prosedur-prosedur yang saling berhubungan, berkumpul bersama-sama untuk melakukan suatu kegiatan atau menyelesaikan suatu sasaran tertentu.
+	Menurut Tata Sutabri (2016:10), sistem secara sederhana dapat didefinisikan sebagai sekelompok elemen yang terintegrasi dengan maksud yang sama untuk mencapai suatu tujuan.
+	Menurut Sri Mulyani (2016:2), sistem adalah sekumpulan subsistem, komponen, atau elemen yang saling bekerja sama dengan tujuan yang sama untuk menghasilkan informasi yang berguna atau mencapai target tertentu.
+	Berdasarkan ketiga definisi di atas, maka dapat disimpulkan bahwa sistem adalah kesatuan dari berbagai komponen, elemen, atau prosedur yang saling terintegrasi, berinteraksi, dan bekerja sama secara terarah untuk memproses suatu masukan (input) menjadi keluaran (output) demi mencapai tujuan tertentu yang telah ditetapkan.
+	Aplikasi Mobile (Mobile Application)
+	Aplikasi mobile adalah perangkat lunak yang dirancang secara khusus untuk dijalankan pada perangkat genggam seperti ponsel pintar atau tablet.
+	Framework Flutter dan Bahasa Pemrograman Dart
+	Flutter merupakan perangkat pengembangan pencitraan antarmuka (UI SDK) open-source yang dikembangkan oleh Google untuk membangun aplikasi multiplatform dari satu basis kode tunggal. Flutter menggunakan bahasa pemrograman Dart.
+	Firebase
+	Firebase adalah platform penyedia layanan backend (Backend-as-a-Service atau BaaS) dari Google yang mempermudah pengembang dalam mengelola database (Firestore), autentikasi (Firebase Auth), dan notifikasi (Firebase Cloud Messaging).
+	Unified Modeling Language (UML)
+	UML adalah bahasa standar untuk menspesifikasikan, memvisualisasikan, membangun, dan mendokumentasikan artefak dari sistem perangkat lunak berorientasi objek (OOAD).
+	Teori-Teori yang Berhubungan dengan Topik yang Dibahas
+	Subbab ini memaparkan teori khusus terkait fitur-fitur operasional utama pada platform komunitas dan pusat karir.
+	Konsep Komunitas Digital dan Forum Diskusi
+	Komunitas digital merupakan ruang interaksi sosial bursa informasi virtual yang berfungsi untuk mempererat tali silaturahmi serta berbagi pengetahuan antaranggota.
+	Bursa Kerja (Pusat Karir) dan Lowongan Pekerjaan
+	Pusat karir berperan sebagai media penghubung informasi antara pihak penyedia lapangan pekerjaan (instansi/perusahaan) dengan para pencari kerja (anak muda).
+	Mekanisme Kueri Data dan Pagination
+	Pagination adalah teknik membagi sekumpulan data yang besar ke dalam beberapa halaman atau potongan data yang lebih kecil (misalnya menampilkan per 10, 25, 50, atau 100 data) guna mengoptimalkan performa aplikasi dan konsumsi data internet.
+	Literature Review (Penelitian Sebelumnya)
+	Penelitian ini didukung oleh 5 (lima) studi terdahulu untuk menghindari redundansi dan memastikan arah pengembangan sistem berjalan secara ilmiah.
+	No
+	Penulis & Tahun
+	Judul Penelitian
+	Nama Jurnal & Sumber
+	Hasil Penelitian
+	1
+	
+	Saputra & Lestari
+	( 2023 )
+	Rancang Bangun Aplikasi Pusat Karir (Career Center) Berbasis Mobile Menggunakan Framework Flutter
+	Jurnal Teknologi Sistem Informasi dan Aplikasi (JTSIA), Vol. 6, No. 2, Hal. 145-152. Diterbitkan oleh Universitas Pamulang
+	Penelitian ini berhasil membangun aplikasi Android untuk penyebaran informasi lowongan pekerjaan dan tracking alumni secara real-time yang dinilai efektif memangkas waktu pencarian kerja hingga 50%
+	2
+	Hidayat, Ramadhan, & Prasetyo (2024)
+	Implementasi Firebase Authentication Sebagai Sistem Keamanan Akun Pengguna Pada Aplikasi Android.
+	Jurnal Rekayasa Perangkat Lunak dan Aplikasi (JURPLAK), Vol. 5, No. 1, Hal. 34-41. Diterbitkan oleh Ikatan Ahli Informatika Indonesia (IAII).
+	Menunjukkan bahwa penggunaan Firebase Authentication mampu memangkas waktu verifikasi akun secara signifikan dan memiliki proteksi keamanan yang tinggi serta tahan terhadap serangan brute-force berkat enkripsi bawaan Google.
+	3
+	Pratama & Wijaya (2023)
+	Pengembangan Aplikasi Platform Komunitas Digital Berbasis Mobile dengan Arsitektur Client-Server.
+	Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), Vol. 7, No. 4, Hal. 812-819. Diterbitkan oleh Ikatan Komputer dan Informatika Indonesia (IKII).
+	Menghasilkan platform komunikasi interaktif antar anggota komunitas dengan fitur forum diskusi dan pengelompokan regional yang sukses meningkatkan keaktifan komunikasi antaranggota sebesar 65%.
+	4
+	Wati (2024)
+	Penerapan Teknik Pagination dan Optimalisasi Kueri Data pada Aplikasi Mobile Informasi Lowongan Kerja.
+	Jurnal Informatika dan Komputer (JIKO), Vol. 8, No. 3, Hal. 210-217. Diterbitkan oleh Universitas STIKUBANK.
+	Membuktikan bahwa penerapan teknik pagination pada daftar lowongan kerja dapat mempercepat loading time aplikasi hingga 40% dan menghemat bandwidth konsumsi data internet mobile secara signifikan.
+	5
+	Rumbiak & Wenda (2025)
+	Sistem Informasi Pemetaan Potensi Sumber Daya Manusia Daerah Berbasis Web dan Mobile di Kawasan Indonesia Timur.
+	Jurnal Ilmiah Teknologi Informasi Kawasan Timur (Jurnal Tekno-Timur), Vol. 3, No. 1, Hal. 45-53. Diterbitkan oleh Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) Papua.
+	Menghasilkan sistem pemetaan data profil masyarakat berdasarkan asal distrik/kabupaten yang mampu mempermudah instansi daerah dalam menyalurkan program pelatihan kerja secara tepat sasaran.
+	6
+	Nugroho & Setiawan (2024)
+	Integrasi Firebase Authentication dan Database Relasional MySQL Menggunakan RESTful API PHP pada Aplikasi Mobile
+	Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer, Vol. 8, No. 5, Hal. 1820-1828. Diterbitkan oleh Universitas Brawijaya.
+	Sangat Sesuai: Membuktikan bahwa metode hybrid yang menggabungkan Firebase Auth (untuk login aman) dan MySQL lokal via API PHP menghasilkan arsitektur data yang efisien, aman dari SQL Injection, dan mempercepat sinkronisasi data profil pengguna.
+	
+	7
+	Putra & Handayani (2025)
+	Rancang Bangun Sistem Informasi Komunitas Pemuda Daerah Berbasis Android Menggunakan Framework Flutter
+	Jurnal Media Informatika Budidarma, Vol. 9, No. 2, Hal. 540-549. Diterbitkan oleh STMIK Pelita Nusantara.
+	Sangat Sesuai: Berhasil membangun aplikasi mobile khusus komunitas pemuda daerah yang memetakan persebaran anggota berdasarkan wilayah tempat tinggal untuk mempermudah distribusi program kepemudaan.
+	8
+	Kurniawan & Sari (2023)
+	Pembangunan Aplikasi Bursa Kerja Khusus (BKK) Berbasis Android Menggunakan Bahasa Pemrograman Dart
+	Jurnal Teknologi Informasi dan Ilmu Komputer (JTIIK), Vol. 10, No. 4, Hal. 711-718. Diterbitkan oleh Universitas Brawijaya.
+	Penelitian ini menghasilkan aplikasi pencarian kerja berskala regional dengan performa antarmuka yang responsif berkat optimasi state management pada framework Flutter.
+	
+	9
+	Lestari, dkk. (2024)
+	Sistem Informasi Pusat Karir Terintegrasi Berbasis Mobile Guna Pemetaan Kompetensi Lulusan Wilayah Indonesia Timur
+	Jurnal CoreIT: Jurnal Hasil Penelitian Ilmu Komputer dan Teknologi Informasi, Vol. 10, No. 1, Hal. 12-21. Diterbitkan oleh Universitas Islam Negeri Sultan Syarif Kasim Riau.
+	Sangat Sesuai: Menghasilkan aplikasi pusat karir mobile yang sukses mengelompokkan profil kompetensi pengguna berdasarkan asal daerah, sangat relevan dengan fungsi pemetaan kabupaten pada aplikasi Anda.
+	10
+	Siregar & Ramadhan (2025)
+	Analisis Keamanan Kredensial Pengguna Menggunakan Cloud Authentication Service Pada Framework Aplikasi Lintas Platform
+	Jurnal Infomedia: Teknik Informatika, Data Mining, dan Jaringan, Vol. 10, No. 2, Hal. 88-95. Diterbitkan oleh Politeknik Negeri Lhokseumawe.
+	Menyimpulkan bahwa otentikasi berbasis cloud (seperti Firebase) memberikan lapisan perlindungan enkripsi token yang solid untuk aplikasi mobile tanpa membebani server database lokal.
+	
+	
+	BAB III
+	ANALISIS SISTEM BERJALAN
+	
+	Gambaran Umum Objek yang Diteliti
+	Sejarah Singkat
+	Komunitas Anak Muda Papua merupakan sebuah organisasi non-profit yang didirikan sebagai wadah persatuan, komunikasi, dan pengembangan potensi bagi pemuda-pemudi yang berasal dari berbagai kabupaten di wilayah Provinsi Papua. Organisasi ini memiliki 
+	visi untuk mewujudkan generasi muda Papua yang berdaya saing global, mandiri, dan memiliki kompetensi profesional yang unggul. 
+	Misinya meliputi penyediaan informasi karir yang merata, pengelompokan komunitas regional berbasis kabupaten untuk mempermudah koordinasi, serta pelaksanaan program pelatihan keterampilan digital bagi pemuda daerah.
+	
+	Struktur Organisasi
+	Struktur organisasi dirancang untuk mengelola hubungan antar-anggota komunitas serta pembagian informasi pusat karir secara berjenjang di tingkat pusat hingga daerah kabupaten. 
+	1066800
+	Gambar 3.1
+	
+	
+	Wewenang dan Tanggung Jawab
+	Berdasarkan bagan organisasi pada Gambar 3.1, berikut adalah rincian pembagian wewenang dan tanggung jawab dari masing-masing jabatan di dalam struktur organisasi Komunitas Anak Muda Papua:
+	Ketua
+	Memegang otoritas tertinggi dan bertanggung jawab penuh atas seluruh kebijakan, arah pergerakan, serta jalannya program kerja komunitas
+	Mengawasi dan mengoordinasikan kinerja Sekretaris, Bendahara, serta seluruh divisi di bawahnya agar selaras dengan visi dan misi organisasi
+	Mengambil keputusan strategis serta menjalin kerja sama dengan pihak eksternal (mitra industri, perusahaan, atau instansi pemerintah) terkait penyediaan informasi lowongan kerja di pusat karir.
+	Sekretaris
+	Bertanggung jawab penuh atas pengelolaan administrasi internal komunitas, pengarsipan surat-menyurat, dan pendokumentasian hasil rapat organisasi.
+	Membantu Ketua dalam menyusun laporan pertanggungjawaban kegiatan berkala.
+	Berkoordinasi dengan divisi terkait dalam menyusun jadwal kegiatan pendataan atau sosialisasi platform digital kepada anggota.
+	Bendahara
+	Mengatur dan mencatat seluruh arus keuangan masuk maupun keluar yang digunakan untuk mendanai operasional dan kegiatan komunitas.
+	Menyusun laporan keuangan organisasi secara berkala secara transparan dan akuntabel.
+	Bertanggung jawab atas pengelolaan anggaran pengadaan fasilitas teknis pendukung pengembangan platform komunitas.
+	Koordinator Divisi Hubungan Komunitas
+	Bertindak sebagai administrator utama yang menjembatani hubungan komunikasi dan penyebaran informasi secara vertikal kepada koordinator wilayah di tiap kabupaten.
+	Mengelola proses verifikasi awal terhadap keabsahan data profil anggota komunitas berskala luas yang masuk ke dalam sistem.
+	Bertanggung jawab memantau keaktifan forum komunitas digital serta memelihara stabilitas interaksi antar-anggota didalam platform.
+	Koordinator Wilayah Kabupaten
+	Bertanggung jawab sebagai perwakilan resmi pengurus pusat komunitas di tingkat daerah administratif kabupaten masing-masing.
+	Menggerakkan, mendata, dan membantu pemuda-pemudi di wilayah kabupatennya agar dapat mendaftarkan diri secara valid ke dalam sistem.
+	Menyaring dan menyalurkan kembali informasi lowongan pekerjaan dari pusat karir agar dapat diakses secara merata oleh anggota yang berada di daerah kabupatennya.
+	
+	 Tata Laksana Sistem yang Berjalan
+	Sistem pendataan anggota dan penyebaran informasi lowongan kerja yang berjalan saat ini masih menggunakan cara konvensional. Anggota harus mengisi formulir manual atau Google Form secara terpisah di masing-masing grup daerah, lalu pengurus merekapnya ke dalam spreadsheet lokal. Informasi lowongan kerja dibagikan secara acak melalui grup chat media sosial (seperti WhatsApp atau Telegram).
+	
+	Gambar 3.2
+	 Masalah yang Dihadapi
+	Berdasarkan analisis tata laksana sistem yang berjalan, ditemukan beberapa kelemahan utama, yaitu:
+	Penyimpanan Data Terfragmentasi: Data profil anggota terpisah-pisah di berbagai admin kabupaten, sehingga tidak ada basis data relasional pusat untuk memetakan total potensi SDM pemuda Papua.
+	Kerawanan Keamanan Akun: Tidak adanya sistem autentikasi terpusat membuat data rentan dimanipulasi dan disalahgunakan oleh pihak luar.
+	Penumpukan Informasi (Information Overload): Penyebaran lowongan kerja di grup media sosial menumpuk dan tercampur dengan pesan obrolan biasa, sehingga menyulitkan pencarian data tanpa adanya sistem filter halaman (pagination) yang teratur.
+	
+	 Alternatif Pemecahan Masalah
+	Untuk mengatasi kendala pada sistem yang berjalan, diajukan 2 (dua) alternatif pemecahan masalah sebagai berikut: 
+	Alternatif I: Membangun sistem informasi berbasis Web responsive untuk pendataan terpusat menggunakan server internal. Namun, kelemahannya adalah aksesibilitas pemuda di daerah kurang fleksibel karena keterbatasan perangkat PC/laptop di lapangan.
+	Alternatif II (Solusi yang Dipilih): Membangun Platform Digital Berbasis Mobile Application (Android) menggunakan framework Flutter. Mengintegrasikan Firebase Authentication untuk keamanan login pengguna di cloud, serta menyinkronkan data profil (Nama & Kabupaten) ke database relasional MySQL via API PHP. Sistem dilengkapi fitur penayangan bursa kerja yang mengimplementasikan teknik pagination agar aplikasi tetap ringan dijalankan. 
+	
+	 User Requirement (Elisitasi)
+	Elisitasi Tahap I
+	Disusun berdasarkan hasil pengumpulan data melalui observasi dan wawancara dengan stakeholder:
+	
+	
+	Tabel 3.3 Tabel Elisitasi Tahap I
+	No
+	Functional / Keterangan Kebutuhan
+	Functional
+	1
+	Proses Login 
+	2
+	Proses Registrasi
+	3
+	Proses Validasi akun 
+	4
+	Kelola Data Pribadi
+	5
+	Kelola Data Kabupaten
+	6
+	Kelola Data Informassi Spesifikasi Karir
+	7
+	Kelola Data Lowongan/Pekerjaan
+	8
+	Proses Pendaftaran Lowongan/Pekerjaan
+	9
+	Kelola Detail Lowongan Pekerjaan 
+	10
+	Peoses Pencarian Pekerjaan/Lowonghan 
+	11
+	Kelola Data User 
+	12
+	Laporan Pendaftaran Lowongan
+	13
+	Laporan Diterima dalam Lowongan/Pekerjaan
+	14
+	Grafik Pendaftraran Pekerjaan/Lowongan
+	15
+	Data Survey Lowongan Pekerjaan
+	Non Functional / Saya ingin sistem dapat:
+	1
+	Aplikasi berjalan lancar pada sistem operasi Android (Mobile-first)
+	2
+	Memiliki antarmuka (UI/UX) yang menarik dan mudah dipahami (User-friendly)
+	3
+	Proses pertukaran data melalui RESTful API PHP berlangsung cepat (real-time)
+	4
+	Keamanan kata sandi terjaga dengan enkripsi cloud
+	
+	Elisitasi Tahap II
+	Mengklasifikasikan kebutuhan Elisitasi Tahap I dengan menggunakan metode MDI (Mandatory, Desirable, Inessential):
+	Tabel 3.4 Tabel Elisitasi Tahap II
+	No
+	Functional / Keterangan Kebutuhan
+	M
+	D
+	I
+	Functional
+	1
+	Proses Login
+	
+	?
+	
+	2
+	Proses Registrasi
+	?
+	
+	
+	3
+	Proses Validasi akun (Firebase Auth)
+	?
+	
+	
+	4
+	Kelola Data Pribadi
+	?
+	
+	
+	5
+	Kelola Data Kabupaten
+	?
+	
+	
+	6
+	Kelola Data Informasi Spesifikasi Karir
+	?
+	
+	
+	7
+	Kelola Data Lowongan/Pekerjaan
+	?
+	
+	
+	8
+	Proses Pendaftaran Lowongan/Pekerjaan
+	?
+	
+	
+	9
+	Kelola Detail Lowongan Pekerjaan
+	?
+	
+	
+	10
+	Proses Pencarian Pekerjaan/Lowongan
+	
+	?
+	
+	11
+	Kelola Data User
+	?
+	
+	
+	12
+	Laporan Pendaftaran Lowongan
+	
+	?
+	
+	13
+	Laporan Diterima dalam Lowongan/Pekerjaan
+	
+	?
+	
+	14
+	Grafik Pendaftaran Pekerjaan/Lowongan
+	
+	
+	?
+	15
+	Data Survey Lowongan Pekerjaan
+	
+	
+	?
+	Non Functional
+	No
+	Non Functional
+	M
+	D
+	I
+	1
+	Aplikasi berjalan lancar pada sistem operasi Android (Mobile-first)
+	?
+	
+	
+	2
+	Memiliki antarmuka (UI/UX) yang menarik dan mudah dipahami (User-friendly)
+	?
+	
+	
+	3
+	Proses pertukaran data melalui RESTful API PHP berlangsung cepat (real-time)
+	?
+	
+	
+	4
+	Keamanan kata sandi terjaga dengan enkripsi cloud
+	?
+	
+	
+	
+	Elisitasi Tahap III
+	Mengklasifikasikan kembali Elisitasi Tahap II menggunakan metode TOE (Technical, Operational, Economical) dengan opsi HML (High, Middle, Low):
+	Tabel 3.5 Tabel Elisitasi Tahap III
+	No
+	Functional / Keterangan Kebutuhan
+	T (L/M/H)
+	O (L/M/H)
+	E (L/M/H)
+	Functional
+	1
+	Proses Login
+	L
+	L
+	L
+	2
+	Proses Registrasi
+	M
+	L
+	L
+	3
+	Proses Validasi akun (Firebase Auth)
+	M
+	M
+	L
+	4
+	Kelola Data Pribadi
+	L
+	L
+	L
+	5
+	Kelola Data Kabupaten
+	M
+	L
+	L
+	6
+	Kelola Data Informasi Spesifikasi Karir
+	L
+	L
+	L
+	7
+	Kelola Data Lowongan/Pekerjaan
+	M
+	L
+	L
+	8
+	Proses Pendaftaran Lowongan/Pekerjaan
+	M
+	M
+	L
+	9
+	Kelola Detail Lowongan Pekerjaan
+	L
+	L
+	L
+	10
+	Proses Pencarian Pekerjaan/Lowongan
+	L
+	L
+	L
+	11
+	Kelola Data User
+	M
+	L
+	L
+	12
+	Laporan Pendaftaran Lowongan
+	M
+	L
+	L
+	13
+	Laporan Diterima dalam Lowongan/Pekerjaan
+	M
+	L
+	L
+	Non Functional
+	No
+	Non Functional
+	T
+	O
+	E
+	1
+	Aplikasi berjalan lancar pada sistem operasi Android (Mobile-first)
+	M
+	L
+	L
+	2
+	Memiliki antarmuka (UI/UX) yang menarik dan mudah dipahami (User-friendly)
+	L
+	L
+	L
+	3
+	Proses pertukaran data melalui RESTful API PHP berlangsung cepat (real-time)
+	M
+	L
+	L
+	4
+	Keamanan kata sandi terjaga dengan enkripsi cloud
+	M
+	L
+	L
+	(Semua opsi bernilai Low dan Middle, tidak ada opsi High (H) sehingga tidak ada requirement yang dieliminasi).
+	
+	
+	Final Draft Elisitasi
+	Merupakan bentuk akhir yang menjadi landasan utama pembuatan aplikasi platform digital komunitas dan pusat karir Anda:
+	
+	Tabel 3.6 Tabel Final Draft Elisitasi
+	Functional
+	Analisis kebutuhan
+	No
+	Keterangan
+	1
+	Proses Login
+	2
+	Proses Registrasi
+	3
+	Proses Validasi akun (Firebase Auth)
+	4
+	Kelola Data Pribadi
+	5
+	Kelola Data Kabupaten
+	6
+	Kelola Data Informasi Spesifikasi Karir
+	7
+	Kelola Data Lowongan/Pekerjaan
+	8
+	Proses Pendaftaran Lowongan/Pekerjaan
+	9
+	Kelola Detail Lowongan Pekerjaan
+	10
+	Proses Pencarian Pekerjaan/Lowongan
+	11
+	Kelola Data User
+	12
+	Laporan Pendaftaran Lowongan
+	13
+	Laporan Diterima dalam Lowongan/Pekerjaan
+	Non Functional
+	Saya ingin sistem dapat:
+	1
+	Aplikasi berjalan lancar pada sistem operasi Android (Mobile-first)
+	2
+	Memiliki antarmuka (UI/UX) yang menarik dan mudah dipahami (User-friendly)
+	3
+	Proses pertukaran data melalui RESTful API PHP berlangsung cepat (real-time)
+	4
+	Keamanan kata sandi terjaga dengan enkripsi cloud
+	                                             Tangerang, ………………………
+	                                                           Penyusun
+	
+	
+	
+	                                                      Mison Wenda 
+	                                                       1123150103
+	                                                        Mengetahui,
+	             Stakeholder                                                       Pembimbing Utama
+	
+	
+	
+	         Yayan Alfian, S.pd                                         Dr. M. Ramaddan Julianti,M.T
+	
+	
+	BAB IV
+	RANCANGAN SISTEM YANG DIUSULKAN
+	
+	 Usulan Prosedur yang Baru
+	Usulan prosedur yang baru pada aplikasi Papua Youth Career App atau Karir Muda Papua dirancang untuk memperbaiki proses penyampaian informasi lowongan pekerjaan, pendaftaran lowongan, pengelolaan data user, dan pelaporan lamaran secara digital. Sistem yang diusulkan menggantikan proses manual menjadi proses berbasis aplikasi mobile yang terhubung dengan Firebase Authentication, API PHP, dan database MySQL.
+	Pada prosedur baru ini terdapat dua aktor utama, yaitu User dan Admin. User merupakan pengguna umum yang dapat melakukan registrasi akun, verifikasi email, login, mengelola data pribadi, mencari lowongan, mendaftar lowongan, dan melihat status lamaran. Admin merupakan pengguna dengan hak akses khusus yang dapat mengelola data user, data kabupaten, data spesifikasi karir, data lowongan, melihat laporan pendaftaran, dan mengubah status lamaran user.
+	Dengan prosedur baru ini, setiap user yang melakukan registrasi tidak langsung dapat masuk ke sistem sebelum melakukan verifikasi email. Setelah email diverifikasi, user dapat login dan menggunakan fitur aplikasi. Ketika user mendaftar lowongan, data lamaran akan tersimpan ke database dan dapat dilihat oleh admin. Admin kemudian dapat memproses lamaran tersebut dengan mengubah status menjadi pending, accepted, atau rejected. Status tersebut dapat dilihat kembali oleh user melalui halaman lamaran.
+	Pemisahan hak akses dilakukan berdasarkan field role pada tabel users. Setiap user baru yang melakukan registrasi akan otomatis memiliki role user. Admin ditentukan melalui perubahan role pada database menjadi admin. Keamanan API diperkuat dengan penggunaan Firebase ID Token, sehingga endpoint yang bersifat sensitif hanya dapat diakses oleh pengguna yang sudah login dan memiliki hak akses sesuai:
+	
+	Prosedur Registrasi User yang Diusulkan
+	Prosedur registrasi user yang diusulkan adalah sebagai berikut:
+	User membuka halaman registrasi pada aplikasi.
+	User mengisi nama lengkap, asal kabupaten, spesifikasi karir, email, dan kata sandi.
+	Sistem memvalidasi kelengkapan data registrasi.
+	Data akun dikirim ke Firebase Authentication.
+	Firebase membuat akun baru dan mengirim email verifikasi kepada user.
+	Data profil user dikirim melalui API PHP dan disimpan ke database MySQL.
+	User diarahkan ke halaman login.
+	User membuka email dan melakukan verifikasi akun.
+	User dapat login setelah email berhasil diverifikasi.
+	
+	Prosedur Login yang Diusulkan
+	Prosedur login yang diusulkan adalah sebagai berikut :
+	User atau Admin membuka halaman login.
+	User atau Admin memasukkan email dan kata sandi.
+	Sistem memvalidasi akun melalui Firebase Authentication.
+	Sistem memeriksa apakah email sudah diverifikasi.
+	Jika email belum diverifikasi, sistem menolak login dan meminta user melakukan verifikasi email.
+	Jika email sudah diverifikasi, sistem memeriksa role pengguna.
+	Jika role bernilai user, pengguna masuk ke halaman utama user.
+	Jika role bernilai admin, pengguna dapat mengakses menu admin.
+	
+	Prosedur Kelola Profil User yang Diusulkan
+	Prosedur kelola profil user yang diusulkan adalah sebagai berikut:
+	User login ke aplikasi.
+	User membuka halaman profil.
+	User mengubah data pribadi seperti nama lengkap, asal kabupaten, nomor telepon, dan spesifikasi karir.
+	Sistem mengirim Firebase ID Token dan data profil ke API PHP.
+	API PHP memverifikasi token user.
+	API PHP menyimpan perubahan data ke tabel users.
+	Sistem menampilkan pesan bahwa profil berhasil disimpan.
+	
+	Prosedur Pendaftaran Lowongan yang Diusulkan
+	Prosedur pendaftaran lowongan yang diusulkan adalah sebagai berikut:
+	User login ke aplikasi.
+	User membuka halaman lowongan.
+	User mencari dan memilih lowongan pekerjaan.
+	User membuka detail lowongan.
+	User menekan tombol daftar lowongan.
+	Sistem mengirim data pendaftaran ke API PHP.
+	API PHP menyimpan data lamaran ke tabel applications dengan status awal pending.
+	Data lamaran dapat dilihat oleh admin pada menu laporan lamaran.
+	
+	Prosedur Pengelolaan Lamaran oleh Admin yang Diusulkan
+	Prosedur pengelolaan lamaran oleh admin yang diusulkan adalah sebagai berikut:
+	Admin login ke aplikasi.
+	Admin membuka halaman admin.
+	Admin melihat laporan pendaftaran lowongan.
+	Admin melihat data pelamar, lowongan yang dilamar, status lamaran, dan nomor telepon pelamar.
+	Admin mengubah status lamaran menjadi pending, accepted, atau rejected.
+	Sistem menyimpan perubahan status ke tabel applications.
+	User dapat melihat hasil perubahan status pada halaman lamaran.
+	
+	Prosedur Pengelolaan Data Master oleh Admin yang Diusulkan
+	Prosedur pengelolaan data master oleh admin yang diusulkan adalah sebagai berikut:
+	Admin login ke aplikasi.
+	Admin membuka halaman admin.
+	Admin dapat menambahkan data kabupaten.
+	Admin dapat menambahkan data spesifikasi karir.
+	Admin dapat menambahkan, mengubah, dan menghapus data lowongan.
+	Data yang dikelola admin tersimpan ke database MySQL melalui API PHP.
+	
+	
+	
+	 Diagram Rancangan Sistem
+	Perancangan diagram sistem menggunakan prinsip Object Oriented Analysis and Design (OOAD) dengan alat bantu Unified Modeling Language (UML). Diagram yang dirancang meliputi Use Case Diagram, Activity Diagram, Class Diagram, dan Sequence Diagram. Keempat diagram ini menggambarkan kebutuhan fungsional, alur proses, struktur data, serta komunikasi antar komponen pada aplikasi Karir Muda Papua.
+	Use Case Diagram yang Diusulkan
+	Use Case Diagram menggambarkan interaksi antara dua aktor utama, yaitu User dan Admin. User dapat melakukan registrasi, validasi akun melalui email Firebase, login, mengelola data pribadi, mencari lowongan, mendaftar lowongan, dan melihat status lamaran. Admin dapat mengelola data user, data kabupaten, data spesifikasi karir, data lowongan, melihat laporan pendaftaran, serta mengubah status lamaran.
+	
+	Gambar 4.2.1
+	
+	
+	
+	Activity Diagram yang Diusulkan
+	Activity Diagram menggambarkan alur proses registrasi akun baru oleh User. Proses dimulai saat user membuka halaman registrasi, mengisi data registrasi, kemudian sistem melakukan validasi input. Jika data valid, aplikasi mengirim data akun ke Firebase Authentication. Firebase membuat akun user dan mengirim email verifikasi. Setelah itu data profil seperti nama, kabupaten, spesifikasi karir, email, dan nomor telepon disinkronkan melalui API PHP ke database MySQL.
+	User tidak dapat langsung masuk ke aplikasi sebelum email diverifikasi. Setelah user membuka email dan melakukan verifikasi, user dapat login menggunakan akun yang telah dibuat.
+	8991602921000
+	
+	Gambar 4.2.2
+	
+	
+	Class Diagram yang Diusulkan
+	Class Diagram menggambarkan struktur data utama yang digunakan pada sistem. Struktur ini merepresentasikan tabel-tabel pada database MySQL, yaitu users, districts, career_specs, jobs, dan applications. Tabel applications menjadi tabel penghubung antara user dan lowongan pekerjaan.
+	
+			Gambar 4.2.3
+		
+		Sequence Diagram yang Diusulkan
+	Sequence Diagram menggambarkan urutan pertukaran pesan pada proses simpan data pribadi pengguna. Proses dimulai ketika User mengubah data profil pada UI Flutter. Aplikasi mengambil token Firebase dari akun yang sedang login, lalu mengirim request ke endpoint API PHP. API memverifikasi token, memvalidasi UID user, menyimpan data ke MySQL, dan mengembalikan response berhasil ke aplikasi.
+	
+			Gambar 4.2.4
+		
+		
+		
+	Rancangan Basis Data
+		Rancangan basis data digunakan untuk menyimpan seluruh data yang dibutuhkan oleh aplikasi Karir Muda Papua. Database yang digunakan adalah MySQL dengan nama database papua_youth_career. Basis data ini terdiri dari beberapa tabel utama, yaitu tabel users, districts, career_specs, jobs, dan applications.
+	Tabel users digunakan untuk menyimpan data pengguna aplikasi, baik user biasa maupun admin. Tabel districts digunakan sebagai master data kabupaten. Tabel career_specs digunakan sebagai master data spesifikasi karir atau keahlian. Tabel jobs digunakan untuk menyimpan data lowongan pekerjaan. Tabel applications digunakan untuk menyimpan data pendaftaran lowongan yang dilakukan oleh user.
+	
+	Struktur Tabel Users
+		Tabel users digunakan untuk menyimpan data profil pengguna yang telah melakukan registrasi akun. Tabel ini juga menyimpan role pengguna, yaitu user atau admin.
+	Tabel 4.3.1
+	No
+	Nama Field
+	Tipe Data
+	Keterangan
+	1
+	Id
+	INT AUTO_INCREMENT
+	Primary key
+	2
+	Firebase_uid
+	VARCHAR(128)
+	UID akun dari Firebase Authentication
+	3
+	email
+	VARCHAR(150)
+	Email pengguna
+	4
+	name
+	VARCHAR(120)
+	Nama lengkap pengguna
+	5
+	district
+	VARCHAR(100)
+	Asal kabupaten pengguna
+	6
+	phone
+	VARCHAR(30)
+	Nomor telepon pengguna
+	7
+	skil
+	VARCHAR(150)
+	Spesifikasi karir atau keahlian pengguna
+	8
+	role
+	ENUM('user','admin')
+	Hak akses pengguna
+	9
+	created_at
+	TIMESTAMP
+	Waktu data dibuat
+	10
+	update_at
+	TIMESTAMP
+	Waktu data diperbarui
+	Keterangan:
+	Field firebase_uid digunakan untuk menghubungkan akun Firebase dengan data profil yang tersimpan di database MySQL. Field role digunakan untuk membedakan hak akses antara user biasa dan admin.
+	
+	Struktur Tabel Districts
+	Tabel districts digunakan sebagai data master kabupaten yang ditampilkan pada dropdown saat user melakukan registrasi atau mengedit profil.
+	Tabel 4.3.2
+	No
+	Nama Field
+	Tipe Data
+	Keterangan
+	1
+	Id
+	INT AUTO_INCREMENT
+	Primary key
+	2
+	name
+	VARCHAR(100)
+	Nama Kabupaten
+	Keterangan:
+	Data pada tabel ini dikelola oleh admin. User hanya dapat memilih data kabupaten yang telah tersedia.
+	
+	Struktur Tabel Career Specs
+	Tabel career_specs digunakan sebagai data master spesifikasi karir atau keahlian yang dapat dipilih oleh user dan digunakan sebagai kategori lowongan pekerjaan.
+	Tabel 4.3.3
+	No
+	Nama Field
+	Tipe Data
+	Keterangan
+	1
+	Id
+	INT AUTO_INCREMENT
+	Primary key
+	2
+	name
+	VARCHAR(120)
+	Nama Spesifikasi karir
+	3
+	description
+	TEXT
+	Deskripsi Spesifikasi Karir
+	Keterangan:
+	Data spesifikasi karir dikelola oleh admin. Contoh data pada tabel ini adalah Software Development, Digital Marketing, Administrasi, Desain Grafis, dan Data Entry.
+	
+	
+	Struktur Tabel Jobs
+	Tabel jobs digunakan untuk menyimpan data lowongan pekerjaan yang dapat dilihat dan didaftari oleh user.
+	
+	Tabel 4.3.4
+	No
+	Nama Field
+	Tipe Data
+	Keterangan
+	1
+	Id
+	INT AUTO_INCREMENT
+	Primary key
+	2
+	title
+	VARCHAR(160)
+	Judul Lowongan
+	3
+	company
+	VARCHAR(160)
+	Nama Perusahaan atau Instansi
+	4
+	location
+	VARCHAR(120)
+	Lokasi Lowongan
+	5
+	category
+	VARCHAR(120)
+	Kategori Lowongan
+	6
+	descrption
+	TEXT
+	Deskripsi Lowongan
+	7
+	requirements
+	TEXT
+	Persyaratan Lowongan
+	8
+	deadline
+	DATE
+	Batas Akhir  Pendaftaran
+	9
+	Created_at
+	TIMESTAMP
+	Waktu Data di buat
+	Keterangan :
+	Data lowongan hanya dapat ditambah, diubah, dan dihapus oleh admin. User hanya dapat melihat detail lowongan dan melakukan pendaftaran.
+	
+	Struktur Tabel Applications
+	Tabel applications digunakan untuk menyimpan data pendaftaran lowongan yang dilakukan oleh user. Tabel ini memiliki relasi dengan tabel users dan jobs.
+	Tabel 4.3.5
+	No
+	Nama Field
+	Tipe Data
+	Keterangan
+	1
+	Id
+	INT AUTO_INCREMENT
+	Primary key
+	2
+	user_id
+	INT
+	Foreign key dari tabel users
+	3
+	job_id
+	INT
+	Foreign key dari tabel jobs
+	4
+	status
+	ENUM('pending','accepted','rejected')
+	Status lamaran
+	5
+	Created_at
+	TIMESTAMP
+	Waktu lamaran dikirim
+	Keterangan :
+	Field status digunakan untuk menampilkan status lamaran user. Status awal adalah pending. Admin dapat mengubah status menjadi accepted jika lamaran diterima atau rejected jika lamaran ditolak.
+	
+	
+	Relasi Antar Tabel
+	Relasi antar tabel pada database Karir Muda Papua adalah sebagai berikut:
+	Tabel users memiliki relasi one-to-many dengan tabel applications, karena satu user dapat mengirim lebih dari satu lamaran.
+	Tabel jobs memiliki relasi one-to-many dengan tabel applications, karena satu lowongan dapat menerima banyak lamaran.
+	Tabel districts menjadi referensi data kabupaten pada tabel users.
+	Tabel career_specs menjadi referensi data skill pada tabel users dan referensi kategori pada tabel jobs.
+		Relasi utama pada sistem terdapat pada tabel applications, karena tabel ini menghubungkan data user dengan data lowongan pekerjaan.
+	Rancangan Prototype/Tampilan
+	Aplikasi Karir Muda Papua yang dibuat sebagai gambaran awal antarmuka sistem sebelum digunakan oleh user dan admin. Rancangan prototype dibuat untuk memudahkan pengguna dalam memahami alur penggunaan aplikasi, mulai dari proses registrasi, login, pencarian lowongan, pendaftaran lowongan, sampai pengelolaan data oleh admin.
+	Tampilan aplikasi dirancang dengan konsep sederhana, modern, dan mudah digunakan. Warna utama yang digunakan adalah hijau toska atau teal yang memberikan kesan profesional, segar, dan sesuai dengan tema aplikasi karir. Setiap halaman dibuat dengan tata letak yang rapi, penggunaan tombol yang jelas, serta form input yang mudah dipahami.
+	Rancangan tampilan pada aplikasi ini dibagi menjadi dua bagian utama, yaitu tampilan untuk user dan tampilan untuk admin.
+	
+	Tampilan user terdiri dari beberapa halaman utama, yaitu:
+	Tampilan Login
+	Halaman login digunakan oleh user untuk masuk ke dalam aplikasi menggunakan email dan kata sandi. Pada halaman ini terdapat form email, form kata sandi, tombol masuk, serta pilihan untuk menuju halaman registrasi.
+	Tampilan Registrasi
+	Halaman registrasi digunakan oleh user baru untuk membuat akun. Data yang diisi meliputi nama lengkap, email, asal kabupaten, spesifikasi karir atau keahlian, dan kata sandi. Setelah registrasi, user harus melakukan verifikasi email terlebih dahulu sebelum dapat login ke aplikasi.
+	Tampilan Beranda User
+	Halaman beranda menampilkan informasi ringkas mengenai user, seperti nama, kabupaten, spesifikasi karir, jumlah lamaran yang dikirim, jumlah lamaran yang diterima, akses cepat ke lowongan, serta daftar lowongan terbaru.
+	Tampilan Lowongan
+	Halaman lowongan digunakan user untuk melihat daftar lowongan pekerjaan yang tersedia. User dapat melihat informasi lowongan seperti judul pekerjaan, nama perusahaan, lokasi, kategori, deadline, dan status apakah lowongan sudah didaftari atau belum.
+	Tampilan Detail Lowongan
+	Halaman detail lowongan menampilkan informasi lengkap mengenai lowongan pekerjaan, seperti nama pekerjaan, perusahaan, lokasi, kategori, deadline, gaji, deskripsi pekerjaan, persyaratan, dan tombol untuk mendaftar lowongan.
+	Tampilan Lamaran User
+	Halaman ini digunakan user untuk melihat daftar lamaran yang telah dikirim. Pada halaman ini user dapat mengetahui status lamaran, yaitu menunggu, diterima, atau ditolak.
+	Tampilan Profile User
+	Halaman profil digunakan user untuk melihat dan mengubah data pribadi. Data yang dapat diubah meliputi nama lengkap, nomor telepon, asal kabupaten, dan spesifikasi karir. User juga dapat keluar dari akun melalui halaman ini.
+	Tampilan admin terdiri dari beberapa halaman utama, yaitu:
+	Tampilan Dashboard Admin
+	Halaman dashboard admin menampilkan ringkasan data sistem, seperti total user, total lowongan, total lamaran, jumlah lamaran diterima, ringkasan status lamaran, serta daftar lamaran terbaru.
+	Tampilan Kelola Lowongan
+	Halaman ini digunakan admin untuk mengelola data lowongan. Admin dapat menambah, mengedit, dan menghapus lowongan pekerjaan. Data lowongan meliputi judul lowongan, nama perusahaan, gaji, lokasi, kategori, deadline, deskripsi, dan persyaratan.
+	Tampilan Kelola Lamaran
+	Halaman ini digunakan admin untuk melihat seluruh lamaran yang dikirim oleh user. Admin dapat mengubah status lamaran menjadi diterima, ditolak, atau dikembalikan ke status menunggu.
+	Tampilan Data User
+	Halaman data user digunakan admin untuk melihat daftar user yang telah terdaftar di aplikasi. Informasi yang ditampilkan meliputi nama user, kabupaten, spesifikasi karir, email, dan nomor telepon. Nomor telepon ditampilkan agar admin dapat menghubungi user apabila lamaran diterima.
+	Tampilan Data Master
+	Halaman data master digunakan admin untuk mengelola data kabupaten dan spesifikasi karir. Data ini digunakan sebagai pilihan pada saat user melakukan registrasi atau mengedit profil.
+	Dengan adanya rancangan prototype ini, proses pengembangan aplikasi menjadi lebih terarah karena setiap tampilan sudah memiliki fungsi dan alur penggunaan yang jelas. Prototype juga membantu memastikan bahwa kebutuhan user dan admin dapat diterapkan ke dalam sistem aplikasi Karir Muda Papua.
+	
+	Implementasi Sistem yang Diusulkan
+	Implementasi sistem yang diusulkan merupakan tahapan penerapan rancangan sistem ke dalam bentuk aplikasi yang dapat digunakan. Aplikasi Karir Muda Papua diimplementasikan menggunakan Flutter sebagai framework pengembangan aplikasi, Firebase Authentication sebagai layanan autentikasi user, PHP sebagai API backend, dan MySQL sebagai database penyimpanan data.
+	Sistem yang diusulkan memiliki dua jenis pengguna, yaitu user dan admin. User dapat melakukan registrasi, verifikasi email, login, mengelola profil, melihat lowongan, mendaftar lowongan, dan melihat status lamaran. Admin dapat mengelola data user, data kabupaten, data spesifikasi karir, data lowongan, serta mengubah status lamaran yang dikirim oleh user.
+	
+	Spesifikasi Hardware
+	Spesifikasi hardware yang digunakan dalam proses pengembangan dan implementasi aplikasi adalah sebagai berikut:
+	NO
+	Perangkat
+	Spesifikasi
+	1
+	Laptop/PC
+	Minimal Intel Core i3 atau setara
+	2
+	RAM
+	Minimal 4 GB, disarkan 8 GB
+	3
+	Penyimpanan
+	Minimal 10 GB ruang kosong
+	4
+	Smartphone/emulator
+	Android 8.0 atau lebih baru
+	5
+	Jaringan
+	Koneksi internet unutk Firebase dan API
+	
+	
+	Spesifikasi Software
+	Software yang digunakan dalam pengembangan aplikasi Karir Muda Papua adalah sebagai berikut:
+	NO
+	Software
+	Keterangan
+	1
+	Sistem Operasi
+	Windows 10/11
+	2
+	Flutter 
+	SDKFramework pengembangan aplikasi mobile
+	3
+	Dart 
+	Bahasa pemrograman Flutter
+	4
+	Android Studio / Visual Studio Code 
+	Editor dan alat pengembangan aplikasi
+	5
+	Firebase Authentication 
+	Autentikasi user dan verifikasi email
+	6
+	PHP 
+	Backend API
+	7
+	MySQL 
+	Database sistem
+	8
+	XAMPP 
+	Server lokal Apache dan MySQL
+	9
+	Browser 
+	Untuk menjalankan dan menguji aplikasi versi web
+	10
+	phpMyAdmin 
+	Pengelolaan database MySQL
+	
+	Spesifikasi Brainware
+	Brainware merupakan pengguna atau pihak yang terlibat dalam penggunaan dan pengelolaan sistem. Brainware pada aplikasi ini terdiri dari:
+	No
+	Brainware
+	Akses
+	1
+	User
+	Registrasi, login, edit profil, melihat lowongan, mendaftar lowongan, dan melihat status lamaran
+	2
+	Admin
+	Mengelola data user, data kabupaten, spesifikasi karir, lowongan, dan status lamaran
+	3
+	Developer
+	Mengembangkan, memperbaiki, dan melakukan pemeliharaan sistem
+	
+	
+	Schedule Implementasi
+	Schedule implementasi merupakan jadwal pelaksanaan pengembangan sistem dari tahap persiapan sampai pengujian. Jadwal implementasi sistem yang diusulkan adalah sebagai berikut:
+	No 
+	Kegiatan
+	Waktu Pelaksanaan
+	1
+	Analisis kebutuhan sistem 
+	Minggu ke-1
+	2
+	Perancangan database dan UML
+	Minggu ke-1
+	3
+	Perancangan prototype tampilan 
+	Minggu ke-2
+	4
+	Implementasi frontend Flutter 
+	Minggu ke-2 sampai ke-3
+	5
+	Implementasi backend API PHP 
+	Minggu ke-3
+	6
+	Integrasi Firebase Authentication 
+	Minggu ke-3
+	7
+	Integrasi aplikasi dengan database MySQL
+	Minggu ke-4
+	8
+	Pengujian fitur user dan admin
+	Minggu ke-4
+	9
+	Perbaikan sistem
+	Minggu ke-4
+	10
+	Penyusunan laporan akhir
+	Minggu ke-4
+	
+	Berdasarkan implementasi sistem yang diusulkan, aplikasi Karir Muda Papua diharapkan dapat membantu pemuda Papua dalam mencari informasi lowongan pekerjaan dan melakukan pendaftaran lowongan secara lebih mudah. Selain itu, admin dapat mengelola data lowongan dan lamaran secara lebih terstruktur melalui sistem yang telah dibuat.
+
